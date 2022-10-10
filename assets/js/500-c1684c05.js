@@ -1,0 +1,1 @@
+import{al as e,j as t,B as a,am as s}from"./index-08111c84.js";import{R as r}from"./index-e2cb5661.js";const l=()=>{const o=e();return t(r,{status:"500",title:"500",subTitle:"Sorry, something went wrong.",extra:t(a,{type:"primary",onClick:()=>{o(s)},children:"Back Home"})})};export{l as default};

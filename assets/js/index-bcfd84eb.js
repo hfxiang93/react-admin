@@ -1,0 +1,1 @@
+import{j as t,e}from"./index-08111c84.js";const r=()=>t("div",{className:"content-box",children:e("span",{className:"text",children:["Github \u4ED3\u5E93\uFF1A",t("a",{href:"https://github.com/hfxiang93/react-admin",target:"_blank",rel:"noreferrer",children:"https://github.com/hfxiang93/react-admin"})," ","\u{1F352}\u{1F349}\u{1F34A}"]})});export{r as default};

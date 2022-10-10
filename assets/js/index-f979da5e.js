@@ -1,1 +1,0 @@
-import{j as t}from"./index-736fd3dc.js";const e=()=>t("div",{className:"content-box",children:t("span",{className:"text",children:"BatchImport \u{1F353}\u{1F347}\u{1F348}\u{1F349}"})});export{e as default};
