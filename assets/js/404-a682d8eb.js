@@ -1,0 +1,1 @@
+import{al as e,j as t,B as a,am as s}from"./index-736fd3dc.js";import{R as r}from"./index-75fc001a.js";const u=()=>{const o=e();return t(r,{status:"404",title:"404",subTitle:"Sorry, the page you visited does not exist.",extra:t(a,{type:"primary",onClick:()=>{o(s)},children:"Back Home"})})};export{u as default};
