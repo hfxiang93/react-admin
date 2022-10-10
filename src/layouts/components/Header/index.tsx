@@ -3,7 +3,7 @@
  * @Author: xianghaifeng
  * @Date: 2022-09-29 16:32:19
  * @LastEditors: xianghaifeng
- * @LastEditTime: 2022-10-09 10:11:42
+ * @LastEditTime: 2022-10-10 19:42:44
  */
 import { Layout } from "antd";
 import AvatarIcon from "./components/AvatarIcon";
@@ -29,7 +29,7 @@ const LayoutHeader = () => {
 				<Language />
 				<Theme />
 				<Fullscreen />
-				<span className="username">Hooks</span>
+				<span className="username">hfxiang</span>
 				<AvatarIcon />
 			</div>
 		</Header>

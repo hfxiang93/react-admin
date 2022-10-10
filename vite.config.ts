@@ -13,7 +13,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 	const viteEnv = wrapperEnv(env);
 
 	return {
-		// base: "/",
+		base: "/react-admin",
 		// alias config
 		resolve: {
 			alias: {
@@ -78,7 +78,6 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 		// build configure
 		build: {
 			outDir: "dist",
-			assetsDir: "/react-admin",
 			// esbuild 打包更快，但是不能去除 console.log，去除 console 使用 terser 模式
 			minify: "esbuild",
 			// minify: "terser",
