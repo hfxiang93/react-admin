@@ -13,7 +13,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 	const viteEnv = wrapperEnv(env);
 
 	return {
-		base: "/react-admin",
+		base: "/react-admin/",
 		// alias config
 		resolve: {
 			alias: {
