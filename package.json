@@ -20,6 +20,7 @@
 		"commit": "git pull && git add -A && git-cz && git push"
 	},
 	"dependencies": {
+		"@ant-design/pro-components": "^2.3.27",
 		"@reduxjs/toolkit": "^1.8.3",
 		"antd": "^4.23.4",
 		"axios": "^0.27.2",
@@ -39,7 +40,8 @@
 		"redux-persist": "^6.0.0",
 		"redux-promise": "^0.6.0",
 		"redux-thunk": "^2.4.1",
-		"screenfull": "^6.0.2"
+		"screenfull": "^6.0.2",
+		"xlsx": "^0.18.5"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.2",

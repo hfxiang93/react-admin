@@ -1,8 +1,63 @@
-import { useEffect } from "react";
+/*
+ * @Descripttion:
+ * @Author: xianghaifeng
+ * @Date: 2022-09-29 16:34:15
+ * @LastEditors: xianghaifeng
+ * @LastEditTime: 2022-10-12 15:55:55
+ */
+import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useEffect, useRef } from "react";
 import { Table, DatePicker, Button, Space } from "antd";
 import useAuthButtons from "@/hooks/useAuthButtons";
+import { useNavigate, useSearchParams, useParams } from "react-router-dom";
 
 import "./index.less";
+import { ReactI18NextChild } from "react-i18next";
+
+interface ISonProps {
+	title:
+		| string
+		| number
+		| boolean
+		| ReactElement<any, string | JSXElementConstructor<any>>
+		| ReactFragment
+		| ReactPortal
+		| Iterable<ReactI18NextChild>
+		| null
+		| undefined;
+	changeName: () => void;
+}
+const SonHooks = ({ title, changeName }: ISonProps) => {
+	const [searchParams] = useSearchParams();
+	const params = useParams();
+	console.log(searchParams.get("name"));
+	console.log(params);
+	const navigate = useNavigate();
+	const buttonRef = useRef(null);
+	useEffect(() => {
+		console.log(buttonRef);
+		changeName();
+	}, []);
+	const toHome = () => {
+		navigate("/home/index", { replace: false });
+	};
+	return (
+		<div>
+			{title}
+			<Button
+				ref={buttonRef}
+				type="primary"
+				onClick={() => {
+					changeName();
+				}}
+			>
+				click
+			</Button>
+			<Button type="primary" onClick={toHome}>
+				跳转首页
+			</Button>
+		</div>
+	);
+};
 
 const UseHooks = () => {
 	// 按钮权限
@@ -13,6 +68,9 @@ const UseHooks = () => {
 		console.log(BUTTONS);
 	}, []);
 
+	const changeName = () => {
+		console.log("son", BUTTONS);
+	};
 	const dataSource = [
 		{
 			key: "1",
@@ -81,6 +139,7 @@ const UseHooks = () => {
 				</Space>
 			</div>
 			<Table dataSource={dataSource} columns={columns} />
+			<SonHooks title="son" changeName={changeName} />
 		</>
 	);
 };

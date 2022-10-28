@@ -1,5 +1,12 @@
+/*
+ * @Descripttion:
+ * @Author: xianghaifeng
+ * @Date: 2022-09-29 16:32:19
+ * @LastEditors: xianghaifeng
+ * @LastEditTime: 2022-10-28 15:16:22
+ */
 import { Login } from "@/api/interface/index";
-import { PORT1 } from "@/api/config/servicePort";
+import { PORT1, PORT3 } from "@/api/config/servicePort";
 import qs from "qs";
 
 import http from "@/api";
@@ -23,4 +30,9 @@ export const getAuthorButtons = () => {
 // * 获取菜单列表
 export const getMenuList = () => {
 	return http.get<Menu.MenuOptions[]>(PORT1 + `/menu/list`);
+};
+
+// * 获取数据列表
+export const getDataList = (params: any) => {
+	return http.get(PORT3 + `/github/issues`, params);
 };

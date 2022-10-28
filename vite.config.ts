@@ -41,10 +41,15 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			// https: false,
 			// 代理跨域（mock 不需要配置，这里只是个事列）
 			proxy: {
-				"/api": {
+				"/api/hooks": {
 					target: "https://mock.mengxuegu.com/mock/63423d4cb316cf5b3d7e64cd", // easymock
 					changeOrigin: true,
-					rewrite: path => path.replace(/^\/api/, "")
+					rewrite: path => path.replace(/^\/api\/hooks/, "")
+				},
+				"/api/dataScreen": {
+					target: "https://proapi.azurewebsites.net", // easymock
+					changeOrigin: true,
+					rewrite: path => path.replace(/^\/api\/dataScreen/, "")
 				}
 			}
 		},
