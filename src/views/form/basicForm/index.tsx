@@ -1,10 +1,16 @@
+/*
+ * @Descripttion:
+ * @Author: xianghaifeng
+ * @Date: 2022-10-31 16:00:12
+ * @LastEditors: xianghaifeng
+ * @LastEditTime: 2022-11-02 16:32:07
+ */
 import { Button, Form, Input, Select, Space, message } from "antd";
 import "./index.less";
 
 const BasicForm = () => {
 	const { Option } = Select;
 	const [form] = Form.useForm();
-
 	const onGenderChange = (value: string) => {
 		switch (value) {
 			case "male":
@@ -45,7 +51,7 @@ const BasicForm = () => {
 			</Form.Item>
 			<Form.Item name="gender" label="Gender">
 				<Select placeholder="Select a option and change input text above" onChange={onGenderChange} allowClear>
-					<Option value="male">male</Option>
+					<Option value="male">males</Option>
 					<Option value="female">female</Option>
 					<Option value="other">other</Option>
 				</Select>
