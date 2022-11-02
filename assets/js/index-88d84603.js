@@ -1,1 +1,0 @@
-import{j as e}from"./index-2e08c262.js";var r="/Users/xhf/code-github/react-admin/src/views/dashboard/embedded/index.tsx";const a=()=>e.exports.jsxDEV("iframe",{src:"https://cn.bing.com/",frameBorder:"0",className:"full-iframe"},void 0,!1,{fileName:r,lineNumber:4,columnNumber:9},void 0);export{a as default};

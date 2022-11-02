@@ -1,0 +1,1 @@
+import{j as e,a as t}from"./index-810d8f06.js";const r=()=>e("div",{className:"content-box",children:t("span",{className:"text",children:["MyBlog \uFF1A",e("a",{href:"https://hfxiang93.github.io/blog/",target:"_blank",rel:"noreferrer",children:"https://hfxiang93.github.io/blog/"})," ","\u{1F352}\u{1F349}\u{1F34A}"]})});export{r as default};
