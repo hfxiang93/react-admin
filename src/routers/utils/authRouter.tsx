@@ -1,3 +1,10 @@
+/*
+ * @Descripttion:
+ * @Author: xianghaifeng
+ * @Date: 2022-10-31 16:00:12
+ * @LastEditors: xianghaifeng
+ * @LastEditTime: 2022-11-09 09:55:19
+ */
 import { useLocation, Navigate } from "react-router-dom";
 import { searchRoute } from "@/utils/util";
 import { rootRouter } from "@/routers/index";

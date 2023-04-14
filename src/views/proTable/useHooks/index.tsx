@@ -3,7 +3,7 @@
  * @Author: xianghaifeng
  * @Date: 2022-09-29 16:34:15
  * @LastEditors: xianghaifeng
- * @LastEditTime: 2022-10-12 15:55:55
+ * @LastEditTime: 2022-11-09 10:44:45
  */
 import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useEffect, useRef } from "react";
 import { Table, DatePicker, Button, Space } from "antd";
@@ -12,6 +12,8 @@ import { useNavigate, useSearchParams, useParams } from "react-router-dom";
 
 import "./index.less";
 import { ReactI18NextChild } from "react-i18next";
+import useMouse from "@/hooks/useMouse";
+import useTitle from "@/hooks/useTitle";
 
 interface ISonProps {
 	title:
@@ -29,14 +31,14 @@ interface ISonProps {
 const SonHooks = ({ title, changeName }: ISonProps) => {
 	const [searchParams] = useSearchParams();
 	const params = useParams();
-	console.log(searchParams.get("name"));
-	console.log(params);
 	const navigate = useNavigate();
 	const buttonRef = useRef(null);
 	useEffect(() => {
+		console.log(searchParams.get("name"));
+		console.log(params);
 		console.log(buttonRef);
 		changeName();
-	}, []);
+	}, [params]);
 	const toHome = () => {
 		navigate("/home/index", { replace: false });
 	};
@@ -63,7 +65,8 @@ const UseHooks = () => {
 	// 按钮权限
 	const { BUTTONS } = useAuthButtons();
 	const { RangePicker } = DatePicker;
-
+	const [x, y] = useMouse();
+	useTitle("hooks");
 	useEffect(() => {
 		console.log(BUTTONS);
 	}, []);
@@ -133,7 +136,16 @@ const UseHooks = () => {
 			</div>
 			<div className="auth">
 				<Space>
-					{BUTTONS.add && <Button type="primary">我是 Admin && User 能看到的按钮</Button>}
+					{BUTTONS.add && (
+						<Button
+							type="primary"
+							onClick={() => {
+								console.log(x, y);
+							}}
+						>
+							我是 Admin && User 能看到的按钮
+						</Button>
+					)}
 					{BUTTONS.delete && <Button type="primary">我是 Admin 能看到的按钮</Button>}
 					{BUTTONS.edit && <Button type="primary">我是 User 能看到的按钮</Button>}
 				</Space>

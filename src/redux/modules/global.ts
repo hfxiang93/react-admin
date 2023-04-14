@@ -1,3 +1,10 @@
+/*
+ * @Descripttion:
+ * @Author: xianghaifeng
+ * @Date: 2022-10-31 16:00:12
+ * @LastEditors: xianghaifeng
+ * @LastEditTime: 2022-12-28 10:05:56
+ */
 import { GlobalState } from "@/redux/interface";
 import type { SizeType } from "antd/lib/config-provider/SizeContext";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
